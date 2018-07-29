@@ -144,7 +144,6 @@
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       CollisionActiveReceive = "1";
-      CollisionPhysicsSend = "1";
       CollisionResponseMode = "CUSTOM";
       CollisionPolyList = "-0.039 0.943 0.181 -1.000 1.000 -1.000 0.723 0.850";
       LinkPoints = "0.458 -0.191";
@@ -162,7 +161,6 @@
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       CollisionActiveSend = "1";
-      CollisionPhysicsReceive = "1";
       CollisionPolyList = "-0.638 0.108 0.668 0.113 0.658 0.432 -0.633 0.417";
       LinkPoints = "-0.658 -0.572 0.000 0.000";
          mountID = "12";

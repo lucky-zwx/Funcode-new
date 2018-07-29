@@ -20,7 +20,9 @@ public class CGameMain
 {
 	public static CGameMain g_GameMain;				// 本类的唯一实例
 	public int				m_iGameState =	0;		// 游戏状态，0 -- 游戏结束等待开始状态；1 -- 按下空格键开始，初始化游戏；2 -- 游戏进行中
-	
+	public int              m_map = 1;
+	Map1 map1 = new Map1();
+
 	static
 	{
 		g_GameMain = new CGameMain();
@@ -87,6 +89,9 @@ public class CGameMain
 	// 每局游戏进行中
 	public void	GameRun( float fDeltaTime )
 	{
+		if (m_map == 1){
+			map1.GameRun(fDeltaTime);
+		}
 	}
 	
 	//==============================================================================
@@ -125,6 +130,9 @@ public class CGameMain
 	//    
     public void	OnKeyDown( int iKey, boolean bAltPress, boolean bShiftPress, boolean bCtrlPress )
     {
+    	if (m_map == 1){
+    		map1.OnKeyDown(iKey,bAltPress,bShiftPress,bCtrlPress);
+		}
     }
     
 	// dOnKeyUp：键盘按键弹起后将被调用的方法
@@ -132,6 +140,9 @@ public class CGameMain
 	//    
 	public void	OnKeyUp( int iKey )
 	{
+		if (m_map == 1){
+			map1.OnKeyUp(iKey);
+		}
 	}
 	
 	// dOnSpriteColSprite：精灵与精灵碰撞后将被调用的方法
@@ -141,6 +152,9 @@ public class CGameMain
 	//	
 	public void	OnSpriteColSprite( String szSrcName, String szTarName )
 	{
+		if (m_map == 1){
+			map1.OnSpriteColSprite(szSrcName,szTarName);
+		}
 	}
 	
 	// dOnSpriteColWorldLimit：精灵与世界边界碰撞后将被调用的方法
